@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <!-- link navigasi -->
-    <a href="/">Home</a> | <a href="about">About</a> | <a href="prodi">Prodi</a> | <a href="contact">Contact</a>
+<h1>Home</h1>
+<p>ini halaman home</p>
 
-    <h1>Home</h1>
-    <p>ini halaman home</p>
-
-    <!-- Berita -->
-    <% news.forEach(item => { %>
-        <%= item.title %> <br>
-        <%= item.content %> <hr>
-    <% }) %>
-</body>
-</html>
+<!-- Berita -->
+<div class="row">
+<% news.forEach(item => { %>
+    <div class="col-lg-6 mb-3">
+        <h2><%= item.title %></h2>
+        <p><%= item.content %></p>
+        <a href="" class="btn btn-primary btn-sm">Detil</a>
+    </div>
+<% }) %>
+</div>
